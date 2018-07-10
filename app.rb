@@ -1,5 +1,11 @@
-require 'sinatra'
+require 'sinatra/base'
 
-get '/' do
-  "Welcome"
+
+class BookmarkManager < Sinara::Base
+
+  get '/' do
+    "Welcome"
+  end
+
+run! if app_file == $0
 end
