@@ -1,8 +1,10 @@
+require 'pg'
+
 class Todo
 
   def self.all
-    ['grocery shopping',
-    'take dog to vet',
-    'buy a gift for Joey']
+    connection = PG.connect(dbname: 'todolist_db')
+    todos = connection.exec('SELECT * FROM todolist')
+    todos.map { |todo| todo['task'] }
   end
 end

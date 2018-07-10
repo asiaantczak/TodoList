@@ -8,3 +8,4 @@ gem 'sinatra'
 gem 'rspec'
 gem 'capybara'
 gem 'simplecov', require: false, group: :test
+gem 'pg'
