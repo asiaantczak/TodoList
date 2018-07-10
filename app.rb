@@ -1,10 +1,10 @@
 require 'sinatra/base'
 
 
-class BookmarkManager < Sinara::Base
+class TodoList < Sinatra::Base
 
   get '/' do
-    "Welcome"
+    "Todo List"
   end
 
 run! if app_file == $0
